@@ -37,3 +37,22 @@
 * flex-start
 * flex-end
 * space-between
+* space-around
+
+## flex items
+
+**flex-grow**: define a proporcionalidade de crescimento dos itens, respeitando o tamanho de seus conteúdos internos. (não irá funcionar caso exista um justify-content adicionado ao nosso flex-container
+
+**flex-basis**: estabelece o tamanho inicial do item antes da distribuição do espaço restante dentro dele, usando como base o conteúdo interno disposto.
+
+* **auto**: caso o item nao tenha tamanho, este será proporcional ao conteúdo do item.
+* **px, %, em, ...** são valores exatos previamente definidos.
+* **0(zero)** terá relação com a definição do flex-grow.
+
+**flex-shrink**: estabelece a capacidade de redução ou compressão de um item
+
+**flex**: atalho para o grow, shrink e basis.(ex: flex 1 0 auto = grow: 1, shrink: 0 e basis: auto)
+
+**order**: realmente ajusta a ordem do item. itens de mesma order são colocados lado a lado
+
+**align-self**: estabelece o alinhamento de modo individual sobre um item. (*auto, flex-start, end, center, stretch, baseline*)

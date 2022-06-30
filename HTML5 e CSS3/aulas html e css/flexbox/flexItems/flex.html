@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .container{
+            display: flex;
+            border: 2px solid khaki;
+            max-width: 400px;
+            margin-bottom: 8px;
+        }
+        .item{
+            background: turquoise;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 8px;
+        }
+        .flex-1{
+            /* grow = 1, shrink = 1, basis = 0 */
+            flex: 1;
+        }
+        .width{
+            width: 200px;
+            /* min-width: 200px; */
+        }
+        .flex-2{
+            /* grow = 2, shrink = 1, basis = 0 */
+            flex: 2;
+        }
+        .flex-auto{
+            flex: auto;
+        }
+        .flex-content{
+            flex: content;
+        }
+        .flex-style{
+            flex: 1 1, 10%;
+        }
+    </style>
+</head>
+<body>
+    <p>flex: 1</p>
+    <div class="container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-1">BB</div>
+        <div class="item flex-1">C</div>
+        <div class="item flex-1">def</div>
+        <div class="item flex-1">Ghi</div>
+    </div>
+
+    <p>mix</p>
+    <div class="container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-2">BB</div>
+        <div class="item flex-auto">C</div>
+        <div class="item flex-2">def</div>
+        <div class="item flex-1">Ghi</div>
+    </div>
+
+    <p>width ignorado -> basis = 0</p>
+    <div class="container">
+        <div class="item flex-1 width">A</div>
+        <div class="item flex-2 width">BB</div>
+        <div class="item flex-auto width">C</div>
+        <div class="item flex-2 width">def</div>
+        <div class="item flex-1 width">Ghi</div>
+    </div>
+
+    <p>flex: auto</p>
+    <div class="container">
+        <div class="item flex-auto">A</div>
+        <div class="item flex-auto">BB</div>
+        <div class="item flex-auto">C</div>
+        <div class="item flex-auto">def</div>
+        <div class="item flex-auto">Ghi</div>
+    </div>
+
+    <p>mix</p>
+    <div class="container">
+        <div class="item flex-auto">A</div>
+        <div class="item flex-1">BB</div>
+        <div class="item flex-2">C</div>
+        <div class="item flex-auto">def</div>
+        <div class="item flex-1">Ghi</div>
+    </div>
+
+    <p>flex: content</p>
+    <div class="container">
+        <div class="item flex-content">A</div>
+        <div class="item flex-content">BB</div>
+        <div class="item flex-content">C</div>
+        <div class="item flex-content">def</div>
+        <div class="item flex-content">Ghi</div>
+    </div>
+
+    <p>mix</p>
+    <div class="container">
+        <div class="item flex-content">A</div>
+        <div class="item flex-1">BB</div>
+        <div class="item flex-2">C</div>
+        <div class="item flex-auto">def</div>
+        <div class="item flex-content">Ghi</div>
+    </div>
+
+    <p>teste</p>
+    <div class="container">
+        <div class="item flex-style">A</div>
+        <div class="item flex-style">BB</div>
+        <div class="item flex-style">C</div>
+        <div class="item flex-style">def</div>
+        <div class="item flex-style">Ghi</div>
+    </div>
+
+    <p>mix</p>
+    <div class="container">
+        <div class="item flex-style">A</div>
+        <div class="item flex-style">BB</div>
+        <div class="item flex-1">C</div>
+        <div class="item flex-2">def</div>
+        <div class="item flex-content">Ghi</div>
+    </div>
+</body>
+</html>

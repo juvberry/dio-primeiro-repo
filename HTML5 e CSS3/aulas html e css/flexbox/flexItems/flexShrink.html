@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Shrink</title>
+    <style>
+        .container{
+            display: flex;
+            border: 2px solid salmon;
+            max-width: 350px;
+            margin-bottom: 8px;
+        }
+        .item{
+            background-color: aquamarine;
+            color: black;
+            font-size: 24px;
+            text-align: center;
+            margin: 8px;
+        }
+        .shrink-1{
+            flex-shrink: 1;
+        }
+        .shrink-0{
+            flex-shrink: 0;
+        }
+        .fg-1{
+            flex-grow: 1;
+            flex-basis: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p>flex-shrink: 1</p>
+    <div class="container">
+        <div class="item shrink-1 fg-1">A</div>
+        <div class="item shrink-1 fg-1">B</div>
+        <div class="item shrink-1 fg-1">C</div>
+        <div class="item shrink-1 fg-1">D</div>
+        <div class="item shrink-1 fg-1">E</div>
+    </div>
+    <div class="container">
+        <div class="item shrink-1 fg-1">A</div>
+        <div class="item shrink-1 fg-1">Mussum Ipsum</div>
+        <div class="item shrink-1 fg-1">C</div>
+        <div class="item shrink-1 fg-1">D</div>
+        <div class="item shrink-1 fg-1">E</div>
+    </div>
+    <p>flex-shrink: 0 & basis: 100px</p>
+    <div class="container">
+        <div class="item shrink-0 fg-1">A</div>
+        <div class="item shrink-0 fg-1">Mussum Ipsum</div>
+        <div class="item shrink-0 fg-1">C</div>
+        <div class="item shrink-0 fg-1">D</div>
+        <div class="item shrink-0 fg-1">E</div>
+    </div>
+</body>
+</html>
