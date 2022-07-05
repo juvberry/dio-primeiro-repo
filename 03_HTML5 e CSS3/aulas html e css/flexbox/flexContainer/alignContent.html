@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align items</title>
+    <style>
+        .container{
+            display: flex;
+            height: 350px;
+            max-width: 300px;
+            flex-wrap: wrap;
+            border: 2px solid salmon;
+        }
+        .item{
+            background-color: lightgreen;
+            padding: 0 5px;
+            margin: 5px;
+            flex: 1;
+            text-align: center;
+            color: rgb(59, 13, 71);
+            line-height: 20px;
+            border: 1px solid blueviolet;
+        }
+        .stretch{
+            align-content: stretch;
+        }
+        .center{
+            align-content: center;
+        }
+        .flex-start{
+            align-content: flex-start;
+        }
+        .flex-end{
+            align-content: flex-end;
+        }
+        .space-around{
+            align-content: space-around;
+        }
+        .space-between{
+            align-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <p>stretch</p>
+    <div class="container stretch">
+        <div class="item">1</div>
+        <div class="item">gatinhos</div>
+        <div class="item">algum gato</div>
+        <div class="item">Copo furadis é disculpa de bebadis, arcu quam euismod magna.</div>
+        <div class="item">5o gato</div>
+        <div class="item">gatos sao fofos</div>
+        <div class="item">i love cats</div>
+    </div>
+
+    <p>center</p>
+    <div class="container center">
+        <div class="item">1</div>
+        <div class="item">gatinhos</div>
+        <div class="item">algum gato</div>
+        <div class="item">Copo furadis é disculpa de bebadis, arcu quam euismod magna.</div>
+        <div class="item">5o gato</div>
+        <div class="item">gatos sao fofos</div>
+        <div class="item">i love cats</div>
+    </div>
+
+    <p>flex-start</p>
+    <div class="container flex-start">
+        <div class="item">1</div>
+        <div class="item">gatinhos</div>
+        <div class="item">algum gato</div>
+        <div class="item">Copo furadis é disculpa de bebadis, arcu quam euismod magna.</div>
+        <div class="item">5o gato</div>
+        <div class="item">gatos sao fofos</div>
+        <div class="item">i love cats</div>
+    </div>
+
+    <p>flex-end</p>
+    <div class="container flex-end">
+        <div class="item">1</div>
+        <div class="item">gatinhos</div>
+        <div class="item">algum gato</div>
+        <div class="item">Copo furadis é disculpa de bebadis, arcu quam euismod magna.</div>
+        <div class="item">5o gato</div>
+        <div class="item">gatos sao fofos</div>
+        <div class="item">i love cats</div>
+    </div>
+
+    <p>space-around</p>
+    <div class="container space-around">
+        <div class="item">1</div>
+        <div class="item">gatinhos</div>
+        <div class="item">algum gato</div>
+        <div class="item">Copo furadis é disculpa de bebadis, arcu quam euismod magna.</div>
+        <div class="item">5o gato</div>
+        <div class="item">gatos sao fofos</div>
+        <div class="item">i love cats</div>
+    </div>
+
+    <p>space-between</p>
+    <div class="container space-between">
+        <div class="item">1</div>
+        <div class="item">gatinhos</div>
+        <div class="item">algum gato</div>
+        <div class="item">Copo furadis é disculpa de bebadis, arcu quam euismod magna.</div>
+        <div class="item">5o gato</div>
+        <div class="item">gatos sao fofos</div>
+        <div class="item">i love cats</div>
+    </div>
+</body>
+</html>
