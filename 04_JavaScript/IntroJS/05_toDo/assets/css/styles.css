@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 50%;
+    border: 2px solid cadetblue;
+    border-radius: 3px;
+    margin: 8px 0;
+}
+
+#main-title{
+    color: cornflowerblue;
+    font-size: 32px;
+    margin: 24px 0;
+    width: 100%;
+    text-align: center;
+    line-height: 32px;
+}
+
+#main-title::after{
+    content: "";
+    display: inline-block;
+    height: 2px;
+    background-color: cadetblue;
+    width: 90%;
+}
+
+#subtitle{
+    color: cornflowerblue;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 16px 0 24px 0;
+    text-align: center;
+}
+
+.add-tasks{
+    width: 316px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#task{
+    min-width: 166px;
+    height: 28px;
+    margin-right: 16px;
+    border: 1px solid salmon;
+    border-radius: 4px;
+    background-color: azure;
+}
+
+#task::placeholder{
+    color: salmon;
+    text-align: center;
+}
+
+#btnAdd{
+    width: 100px;
+    height: 24px;
+    background-color: cornflowerblue;
+    color: azure;
+    border: 1px solid cadetblue;
+    border-radius: 4px;
+}
+
+.added-tasks{
+    border: 1px solid cadetblue;
+    border-radius: 6px;
+    margin-top: 32px;
+    text-align: center;
+    padding: 16px;
+    background-color: azure;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    padding: 0;
+}
+
+.item-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#checkbox{
+    margin-right: 8px;
+}

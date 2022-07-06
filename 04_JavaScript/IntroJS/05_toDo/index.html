@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>To Do List</title>
+</head>
+<body class="body">
+    <section class="container">
+        <h1 id="main-title">Meu toDo List</h1>
+        <div class="task-container">
+            <form id="add-tasks">
+                <input type="text" name="task" id="task" placeholder="digite aqui sua nova tarefa">
+                <button type="submit" id="btnAdd">add task</button>
+            </form>
+            <div class="added-tasks">
+                <h2 id="subtitle">Suas tarefas adicionadas:</h2>
+                <ul class="list" id="list-id">
+                    <li class="item-list">
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        texto teste
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>
