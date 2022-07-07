@@ -5,10 +5,6 @@ let list = document.getElementById('list-id')
 let listArr = list.getElementsByClassName('item-list')
 let arr = JSON.parse(localStorage.getItem("tasks"));
 
-// Form.onsubmit = r => {
-//     addTask()
-// }
-
 btnAdd.addEventListener("click", addTask)
 
 function addTask(){
@@ -29,4 +25,8 @@ function getTasks(newTaskValue){
         })
     }
     return newTaskArr
+}
+
+function fillList(){
+    
 }
