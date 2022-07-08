@@ -1,4 +1,5 @@
 #JavaScript
+
 ## a brief history
 **Linguagem interpretada** = rodada em tempo real, browser rodando em tempo real. O código está sendo disponibilidado instantaneamente. Não precisa esperar a compilação do código para receber o resultado dele.
 
@@ -416,3 +417,122 @@ valores que precisamos (ou não) para realizar a func.
 	
 	exDoWhile()
 
+## this
+
+**this**: referência ao próprio contexto
+
+	
+	const pessoa = {
+	    firstName: 'Julia',
+	    lastName: 'Beims',
+	    id: 888,
+	    fullName: function(){
+	        return this.firstName + ' ' + this.lastName
+	    },
+	    getId: function(){
+	        return this.id
+	    }
+	}
+
+	pessoa.fullName()
+	pessoa.getId()
+
+*contexto*: em objeto(método) = próprio objeto dono do método;
+
+*contexto*: sozinho = objeto global(em navegadores, window)
+
+*contexto*: funcao = objeto global
+
+*contexto*: evento = elemento que recebeu o evento
+
+
+**call**: chama o objeto que sera referenciado no this
+
+	const pessoa = {
+    	nome: 'Julia'
+	}
+	
+	const animal = {
+	    nome: 'Yummi'
+	}
+	
+	function getSomething(){
+	    console.log(this.nome)
+	}
+	
+	getSomething.call(pessoa)
+	getSomething.call(animal)
+	
+**apply**: como o call, mas os argumentos referenciados em []
+
+**bind**: clona estrutura da func onde é chamada e aplica o valor do objeto passado como parâmetro
+
+	const retornaNome = function(){
+    	return this.nome
+	}
+	
+	let bruno = retornaNome.bind({nome: 'Bruno'})
+	bruno()
+	
+	
+## arrow function
+
+* não faz hoisting
+* o valor 'this' sempre será global
+* não existe o arguments
+* o constructor nao pode ser utilizado
+
+***
+
+
+ 	let helloWorld = function(){
+     	return 'hello world'
+ 	}
+ 	
+ 	let helloWorld2 = () => {
+ 	    return 'hello world'
+ 	}
+ 	
+ 	let helloWorldInLine = () => {'hello world'}
+ 	
+ 	
+## coleções chaveadas
+
+**map**: estrutura de características no formato [chave e valor] e pode ser iterado com um loop for...of
+
+	const MyMap = new Map()
+
+	MyMap.set('apple', 'fruit')
+	MyMap.get(apple)
+	MyMap.delete('apple')
+	MyMap.get('apple')
+
+
+*map vs object:*
+
+* maps podem ter chaves de qqr tipo 
+* (numeros, booleans), enquanto objetos recebem chaves string
+* maps possuem a propriedade length
+* sao mais faceis de iterar
+* utilizado quando o valor das chaves é desconhecido
+* os valores tem o mesmo tipo
+
+
+**set**: sets sao estruturas que armazenam valores únicos, nao se repetem
+
+	const MySet = new Set()
+
+	MySet.add(1)
+	MySet.add(5)
+	
+	MySet.has(1)
+	// true
+	MySet.has(3)
+	// false
+	MySet.delete(5)
+	
+*set vs array:*
+
+* possui valores únicos
+* em vez da propriedade length, consulta-se o numero de registros pela propriedade size
+* nao possui metodos map, filter, reduce, etc
