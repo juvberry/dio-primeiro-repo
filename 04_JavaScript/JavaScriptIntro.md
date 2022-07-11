@@ -536,3 +536,107 @@ valores que precisamos (ou não) para realizar a func.
 * possui valores únicos
 * em vez da propriedade length, consulta-se o numero de registros pela propriedade size
 * nao possui metodos map, filter, reduce, etc
+
+
+## map
+
+um conjunto passa por uma operação e torna-se um outro conjunto.
+
+cria um novo array, nao modifica o original
+
+realiza operações em ordem [0] - [lastIndex]
+
+`array.map(callback, thisArg(opcional))`
+
+*map vs forEach* (o forEach precisaria ser colocado em uma nova variavel)
+	
+	let array = [1, 2, 3, 4, 5, 6]
+
+	array.map((item) => item * 2)
+	// [2, 3, 6, 8, 10, 12]
+	
+	array.forEach((item) => item * 2)
+	// undefined
+
+## filter
+
+literalmente filtra os itens que correspondem à condição
+
+cria um novo array, nao modifica o original
+
+`array.filter(callback, thisArg)`
+
+****
+
+	let frutas = ['maçã fuji', 'maçã verde', 'uva', 'pera']
+
+	frutas.filter((fruta) => fruta.includes('maçã'))
+	// ['maçã fuji', 'maçã verde']
+
+## reduce
+
+nao retorna um outro array: ele executa uma func em todos os el do array e retorna um valor unico
+
+`array.reduce(callbackFn, initialValue)`
+
+****
+
+	let callbackFn = function(acumulator, currentValue, index, array){
+	    // do something
+	}
+	
+	array.reduce(callbackFn, initialValue)
+
+## tipos de erros
+
+ECMAScript error: erros que ocorrem em tempo de execução
+
+DOMException: erros relaciondados ao Document Object Model(DOM)
+
+**throw**: trata como sendo um erro no console.
+
+	function findPalindrom(string){
+    	if(!string) throw 'string inexistente';
+
+    	return string.split('').reverse().join('') === string
+	}
+	
+	findPalindrom('') // erro console 'string inexistente'
+
+**try/catch**: 
+
+	function tryCatchEx(string){
+	    try{
+	        findPalindrom(string)
+	    }
+	    catch(e){
+	        console.log(e)
+	    }
+	}
+	
+	findPalindrom('') // string invalida no log
+
+**finally**: executa o codigo independente de ter erro ou nao.
+	
+	function tryCatchEx(string){
+	    try{
+	        findPalindrom(string)
+	    }
+	    catch(e){
+	        console.log(e)
+	    }
+	    finally{
+	        console.log('a string enviada foi: ' + string)
+	    }
+	}
+	
+### objeto Error
+
+`new Error(message, fileName, lineNumber)`
+
+		const MeuErro = new Error('Mensagem Inválida')
+		throw MeuErro
+		
+		
+		const MeuErro = new Error('Mensagem Inválida')
+		MeuErro.name = 'Invalid Message'
