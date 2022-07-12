@@ -640,3 +640,58 @@ DOMException: erros relaciondados ao Document Object Model(DOM)
 		
 		const MeuErro = new Error('Mensagem Inválida')
 		MeuErro.name = 'Invalid Message'
+		
+## JS Assíncrono
+
+Assíncrono: nao ocorre ou nao se efetiva ao mesmo tempo, ou seja, podemos fazer duas coisas ao mesmo tempo: enquanto acontece uma, a outra também acontece.
+
+**promises**: objeto de processamento assincrono. inicialmente seu valor é desconhecido, pode ser resolvida ou rejeitada. (vc tem um ingresso pra cinema, ele pode ser resolvido = assistir filme, ou rejeitado = aconteceu algm imprevisto)
+
+		const MyPromise = new Promise((resolve, reject) => {
+    		window.setTimeout(()=>{
+        	resolve(console.log('resolvida!'))
+    }, 2000)
+	})
+	
+	await MyPromise
+		    .then((result)=> result + ' passando pelo then')
+		    .then((result)=> result + ' e agora acabou')
+		    .catch((err)=> console.log(err.message))
+	// apos 2 segundos, retornara o valor "resolvida"
+	// 'resolvida passando pelo then e agora acabou!'
+	
+**async/await**: funcoes assincronas precisam dessas duas palavras chaves
+		
+		
+	async function resolvePromise(){
+	    const MyPromise = new Promise((resolve, reject) => {
+	        window.setTimeout(()=>{
+            	resolve(console.log('resolvida!'))
+	        }, 2000)
+	    })
+	    const resolved = await MyPromise
+	            .then((result)=> result + ' passando pelo then')
+	            .then((result)=> result + ' e agora acabou')
+	            .catch((err)=> console.log(err.message))
+	    return resolved
+	}
+
+### API
+
+Application Programming Interface: forma de intermediar resultados do back-end com o que é apresentado no front-end. vc consegue acessa-la por url
+
+**JSON**: notação de objeto em JS
+
+**fetch**: precisa utilizar o await
+
+	fetch(url, options)
+		.then(response => response.JSON())
+		.then(json => console.log(json))
+	// retorna uma promise
+	
+	fetch(url, {
+		method: 'GET',
+		cache: 'no-cache'
+	})
+		.then(response => response.JSON())
+		.then(json => console.log(json))
