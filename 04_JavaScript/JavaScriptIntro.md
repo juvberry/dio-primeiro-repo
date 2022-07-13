@@ -695,3 +695,74 @@ Application Programming Interface: forma de intermediar resultados do back-end c
 	})
 		.then(response => response.JSON())
 		.then(json => console.log(json))
+
+
+## Orientação a Objetos
+
+## paradigmas
+
+### imperativo:
+você precisa explicar como as coisas acontecem(como o javascript)
+
+
+### declarativo:
+declara as coisas e as coisas acontecem(como um banco de dados)
+
+****
+
+**object**: objetos que possuem uma serie de propriedades.
+
+*pilares:*
+
+* herança
+* polimorfismo
+* encapsulamento
+* abstração
+
+*abstração*: processo mental que consiste em isolar um aspecto determinado de um estado de coisas relativamente complexo, a fim de simplificar a sua avaliação, classificação ou para permitir a comunicação do mesmo.
+
+*herança*: objetos filhos que herdam propriedades e métodos do objeto pai 👨‍👦‍👦
+
+*encapsulamento*: cada classe tem propriedades e métodos independentes do restante do código
+
+*polimorfismo*: objetos podem herdar a mesma classe pai, mas se comportarem de forma diferente quando invocamos seus métodos
+
+**protótipos**: como se fossem um esqueleto. qualquer objeto JS, ele herdará propriedades e métodos do seu pai(caso fosse um objeto "novo", herda do protótipo)
+
+**classes**: sao um *syntax sugar*, ou seja, uma sintaxe feita para facilitar a escrita. o JS não possui classes nativamente. todas as classes sao objetos e a herança são os protótipos.
+
+o **super** é utilizado para gerar a propriedade que está no construtor da classe pai. 
+
+	class Animal{
+		constructor(type = 'animal'){
+			this.type = type
+		}
+		
+		get type(){
+			return this.type
+		}
+		
+		set type(valor){
+			this.type = valor.toUpperCase()
+		}
+		
+		makeSound(){
+			console.log('Making animal sound')
+		}
+		
+	class Cat extends Animal{
+		constructor(){
+			super('cat')
+		}
+		
+		makeSound(){
+			super.makeSound()
+			console.log('Meow!')
+		}
+	}
+	
+	let animal = new Animal()
+	let bardo = new Cat()
+	
+	console.log(animal.type)
+	console.log(bardo.type)

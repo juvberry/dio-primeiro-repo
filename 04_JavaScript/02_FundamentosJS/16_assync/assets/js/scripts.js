@@ -13,6 +13,8 @@ function getApi(){
         .catch(err => console.log(err.message))
 }
 
+
+
 btn.addEventListener('click', res => {
     getApi()
 })
