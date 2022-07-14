@@ -766,3 +766,30 @@ o **super** é utilizado para gerar a propriedade que está no construtor da cla
 	
 	console.log(animal.type)
 	console.log(bardo.type)
+	
+### Módulos no JS
+
+módulos sao arquivos JS que tem a capacidade de exportar e importar informações de outros arquivos de mesmo tipo.
+
+*vantagens:*
+
+* organização do codigo
+* compartilhamento de variaveis em escopos diferentes
+* explicita as dependencias do arq.
+
+
+## DOM
+
+**Document Object Model**
+é como uma árvore genealógica.
+
+
+> o BOM, é o Browser Object Model: window --> (podemos acessar todos esses elementos) document, history, location, screen, navigator
+
+**métodos:**
+
+* getElementById(id)
+* getElementsByClassName(className)
+* getElementsByTagName(tagName)
+* querySelector(cssSelector)
+* querySelectorAll(cssSelector e tagName)
