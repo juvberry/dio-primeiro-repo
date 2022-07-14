@@ -1,0 +1,21 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server",
+    "watch": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "light": "^2.0.0-alpha.26",
+    "lite": "^4.0.5",
+    "server": "^1.0.37"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
