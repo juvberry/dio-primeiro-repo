@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "got": "^12.1.0",
+    "http": "^0.0.1-security",
     "light": "^2.0.0-alpha.26",
     "lite": "^4.0.5",
     "server": "^1.0.37"
